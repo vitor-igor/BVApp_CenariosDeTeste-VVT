@@ -19,11 +19,9 @@ O mini projeto preserva os dez cenários selecionados, cobrindo:
 - expansão e recolhimento da barra lateral;
 - painel do usuário por perfil e indicadores da página Overview.
 
-A Feature **Central de Notificações** não faz parte do escopo. Os cenários não são operações CRUD.
-
 ## Tecnologias e organização
 
-A pasta `functional_tests/` reúne a documentação dos testes funcionais, seguindo a separação conceitual apresentada no exemplo do professor. A referência utiliza Django; aqui aproveitamos somente a ideia de organização, sem reproduzir arquivos específicos desse framework. A estrutura é compatível com o contexto do BVApp em Flask, mas este repositório contém exclusivamente documentação em Markdown e **não é uma aplicação Flask executável**. Não há implementação, interfaces, scripts ou automação nesta etapa. Os cenários poderão ser aproveitados em etapas futuras de implementação e automação.
+A pasta `functional_tests/` reúne a documentação dos testes funcionais. A estrutura é compatível com o contexto do BVApp em Flask, mas este repositório contém exclusivamente documentação em Markdown e **não é uma aplicação Flask executável**. Não há implementação, interfaces, scripts ou automação nesta etapa. Os cenários poderão ser aproveitados em etapas futuras de implementação e automação.
 
 ## Catálogo de cenários
 
@@ -67,8 +65,7 @@ bvapp-cenarios-de-teste/
 
 Use o catálogo para abrir um cenário. Cada arquivo independente em `functional_tests/` apresenta objetivo, requisitos relacionados, ator, pré-condições, fluxo principal e alternativos, regras de negócio, dados, resultados esperados e pontos a confirmar quando os requisitos deixam dúvidas. O [README de functional_tests](functional_tests/README.md) apresenta a finalidade dessa pasta.
 
-Os documentos descrevem o comportamento requerido; não afirmam que o sistema já o implementa. A fonte de requisitos é a exportação do OpenProject `bvapp_gest_o_de_pessoas_2026-11-05_22-17.pdf`.
-
 ## Autoria
 
-Os dez cenários identificam **Vitor Igor** como autor. Curso/Instituição: Engenharia de Software / IFPB.
+**Autor:** Vitor Igor 
+**Curso/Instituição:** Engenharia de Software / IFPB.
