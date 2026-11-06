@@ -55,4 +55,4 @@ Usuário autenticado no BVApp.
 
 ## Dúvida para esclarecimento
 
-- A US descreve as informações para COOPERADO e para perfil administrativo, mas não enumera nominalmente todos os perfis administrativos. Confirmar a classificação caso existam outros tipos de perfil.
+- A US descreve as informações para COOPERADO e para perfil administrativo, mas não enumera nominalmente todos os perfis administrativos. Confirmar a classificação para os outros tipos de perfil.
