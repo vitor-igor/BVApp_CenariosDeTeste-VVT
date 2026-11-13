@@ -8,9 +8,9 @@ Esta documentação poderá ser aproveitada em etapas futuras de implementação
 
 ## Cenários por funcionalidade
 
-- [Autenticação](autenticacao/): CT001, CT002, CT004 e CT005.
-- [Controle de acesso](controle_acesso/): CT003, CT006 e CT007.
-- [Interface](interface/): CT008.
-- [Painéis](paineis/): CT009 e CT010.
+- [Autenticação](autenticacao/): CT007, CT008 e CT009.
+- [Painéis](paineis/): CT010 e CT011.
+- [Perfis](perfis/): CT002 e CT003.
+- [Usuários](usuarios/): CT001, CT004, CT005 e CT006.
 
 Consulte o [README principal](../README.md) para o catálogo completo e os requisitos relacionados.

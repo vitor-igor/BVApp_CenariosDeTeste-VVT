@@ -2,70 +2,61 @@
 
 ## Apresentação
 
-Este repositório individual organiza a documentação dos cenários de teste funcionais do módulo **Gestão de Pessoas e Controle de Acesso** do BVApp. O material foi preparado para a atividade de Engenharia de Testes.
+Este repositório individual organiza a documentação dos cenários de teste funcionais do módulo **Gestão de Entidades** do BVApp, elaborados para a atividade de Engenharia de Testes.
 
 ## Objetivo
 
 Documentar comportamentos funcionais que poderão ser aproveitados em etapas futuras de revisão, verificação, implementação e automação. Esta entrega não implementa nem executa essas verificações.
 
-## Escopo
-
-O mini projeto preserva os dez cenários selecionados, cobrindo:
-
-- autenticação com credenciais válidas e bloqueio de usuário inativo;
-- encerramento de sessão e alteração de senha;
-- troca de perfil ativo e disponibilização de funcionalidades por perfil;
-- atalhos para seleção de permissões;
-- expansão e recolhimento da barra lateral;
-- painel do usuário por perfil e indicadores da página Overview.
-
-## Tecnologias e organização
-
-A pasta `functional_tests/` reúne a documentação dos testes funcionais. A estrutura é compatível com o contexto do BVApp em Flask, mas este repositório contém exclusivamente documentação em Markdown e **não é uma aplicação Flask executável**. Não há implementação, interfaces, scripts ou automação nesta etapa. Os cenários poderão ser aproveitados em etapas futuras de implementação e automação.
-
 ## Catálogo de cenários
 
-| ID | Nome do cenário | Funcionalidade | Requisito relacionado | Documento |
-|---|---|---|---|---|
-| CT001 | Autenticação com credenciais válidas | Autenticação | US 23593 — Realizar login no sistema | [CT001](functional_tests/autenticacao/CT001-autenticacao-credenciais-validas.md) |
-| CT002 | Bloqueio de login de usuário inativo | Autenticação | US 23595 — Login de usuário inativo | [CT002](functional_tests/autenticacao/CT002-login-usuario-inativo.md) |
-| CT003 | Alteração do perfil ativo durante a sessão | Controle de acesso | US 28720 — Atualizar alteração de perfil ativo durante a sessão; relacionada: US 23604 — Alterar perfil ativo durante a sessão | [CT003](functional_tests/controle_acesso/CT003-alteracao-perfil-ativo.md) |
-| CT004 | Encerramento da sessão | Autenticação e sessão | US 23599 — Encerrar sessão do sistema | [CT004](functional_tests/autenticacao/CT004-encerramento-sessao.md) |
-| CT005 | Alteração de senha do usuário | Autenticação e credenciais | US 25515 — Alterar senha do usuário | [CT005](functional_tests/autenticacao/CT005-alteracao-senha.md) |
-| CT006 | Disponibilização de funcionalidades conforme o perfil ativo | Controle de acesso | CA 23601 — Apresentar apenas funcionalidades autorizadas para o perfil ativo; associada à US 23593 | [CT006](functional_tests/controle_acesso/CT006-funcionalidades-por-perfil.md) |
-| CT007 | Atalhos de definição de permissões para perfil | Controle de acesso | US 29269 — Atalhos de definição de permissões para Perfil | [CT007](functional_tests/controle_acesso/CT007-atalhos-permissoes.md) |
-| CT008 | Expansão e recolhimento da barra lateral | Interface e navegação | US 29022 — Expandir sidebar geral | [CT008](functional_tests/interface/CT008-expansao-recolhimento-barra-lateral.md) |
-| CT009 | Visualização do painel do usuário conforme o perfil ativo | Painéis | US 26973 — Painel do Usuário básico; critérios de aceitação relacionados | [CT009](functional_tests/paineis/CT009-painel-usuario.md) |
-| CT010 | Exibição dos indicadores na página Overview | Painéis | US 29672 — Página Overview | [CT010](functional_tests/paineis/CT010-indicadores-overview.md) |
+| ID | Cenário | Requisito relacionado | Pasta |
+|---|---|---|---|
+| CT001 | Gerenciar usuários (CRUD) | RF02025 | `functional_tests/usuarios/` |
+| CT002 | Gerenciar perfis de acesso (CRUD) | RF02013 | `functional_tests/perfis/` |
+| CT003 | Definir funcionalidades disponíveis por perfil | RF02014 | `functional_tests/perfis/` |
+| CT004 | Gerenciar perfis associados a uma conta | RF02026 | `functional_tests/usuarios/` |
+| CT005 | Atualizar os próprios dados cadastrais | RF02027 | `functional_tests/usuarios/` |
+| CT006 | Alterar a própria senha | RF02028 | `functional_tests/usuarios/` |
+| CT007 | Realizar login | RF02031 | `functional_tests/autenticacao/` |
+| CT008 | Alterar o perfil ativo durante a sessão | RF02032 | `functional_tests/autenticacao/` |
+| CT009 | Encerrar a sessão (logout) | RF02033 | `functional_tests/autenticacao/` |
+| CT010 | Visualizar o próprio painel de usuário | RF02029 | `functional_tests/paineis/` |
 
 ## Estrutura de diretórios
 
 ```text
-bvapp-cenarios-de-teste/
+BVApp_CenariosDeTeste-VVT/
 ├── README.md
-└── functional_tests/
-    ├── README.md
-    ├── autenticacao/
-    │   ├── CT001-autenticacao-credenciais-validas.md
-    │   ├── CT002-login-usuario-inativo.md
-    │   ├── CT004-encerramento-sessao.md
-    │   └── CT005-alteracao-senha.md
-    ├── controle_acesso/
-    │   ├── CT003-alteracao-perfil-ativo.md
-    │   ├── CT006-funcionalidades-por-perfil.md
-    │   └── CT007-atalhos-permissoes.md
-    ├── interface/
-    │   └── CT008-expansao-recolhimento-barra-lateral.md
-    └── paineis/
-        ├── CT009-painel-usuario.md
-        └── CT010-indicadores-overview.md
+├── functional_tests/
+│   ├── README.md
+│   ├── perfis/
+│   │   ├── CT002-gestao-perfis.md
+│   │   └── CT003-definir-funcionalidades-perfil.md
+│   ├── usuarios/
+│   │   ├── CT001-gestao-usuarios.md
+│   │   ├── CT004-perfis-associados-conta.md
+│   │   ├── CT005-atualizar-proprios-dados.md
+│   │   └── CT006-alterar-propria-senha.md
+│   ├── autenticacao/
+│   │   ├── CT007-login.md
+│   │   ├── CT008-alteracao-perfil-ativo.md
+│   │   └── CT009-logout.md
+│   └── paineis/
+│       ├── CT010-painel-usuario.md
+└── docs/
+    ├── mapeamento-versao-anterior.md
+    └── pontos-de-atencao.md
 ```
 
-## Orientações de leitura
+## Organização dos cenários
 
-Use o catálogo para abrir um cenário. Cada arquivo independente em `functional_tests/` apresenta objetivo, requisitos relacionados, ator, pré-condições, fluxo principal e alternativos, regras de negócio, dados, resultados esperados e pontos a confirmar quando os requisitos deixam dúvidas. O [README de functional_tests](functional_tests/README.md) apresenta a finalidade dessa pasta.
+Cada arquivo apresenta identificador e título, objetivo, requisito relacionado, ator, pré-condições, fluxo principal, fluxos alternativos, regras de negócio, dados e resultados esperados e autoria.
+
+Nos cenários CRUD, as quatro operações são descritas em um mesmo fluxo, sem dividir cadastro, consulta, atualização e exclusão em cenários separados. Quando o requisito não define um comportamento, a documentação registra o ponto para esclarecimento em vez de inventar uma regra.
 
 ## Autoria
 
-**Autor:** Vitor Igor 
-**Curso/Instituição:** Engenharia de Software / IFPB.
+**Autor:** Vitor Igor  
+**Curso:** Engenharia de Software  
+**Instituição:** IFPB — Campus João Pessoa
